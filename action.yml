@@ -1,9 +1,9 @@
-name: 'Setup AWS EKS'
+name: 'AWS EKS Action'
 description: 'Configure a workflow to connect to an EKS cluster'
-author: 'Lyra Naeseth'
+author: 'Gumlet'
 branding:
-  icon: cloud-drizzle
-  color: blue
+  icon: server
+  color: purple
 inputs:
   cluster:
     description: 'Name of the EKS cluster to connect to'
@@ -18,5 +18,5 @@ inputs:
   allow-error:
     default: false
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
