@@ -1,6 +1,6 @@
 {
-  "name": "setup-aws-eks-action",
-  "version": "0.0.0",
+  "name": "aws-eks-action",
+  "version": "1.0.0",
   "private": true,
   "description": "Connect a GitHub Actions worker to an EKS cluster",
   "main": "lib/main.js",
