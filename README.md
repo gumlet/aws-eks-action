@@ -1,6 +1,6 @@
 # setup-aws-eks
 
-[![build-test](https://github.com/silverlyra/setup-aws-eks/actions/workflows/test.yml/badge.svg)](https://github.com/silverlyra/setup-aws-eks/actions/workflows/test.yml)
+[![build-test](https://github.com/gumlet/aws-eks-action/actions/workflows/test.yml/badge.svg)](https://github.com/gumlet/aws-eks-action/actions/workflows/test.yml)
 
 Use this action to connect to an [AWS EKS][] cluster from a [GitHub Actions][] workflow.
 
@@ -18,7 +18,7 @@ See [action.yml](action.yml).
 
 <!-- start usage -->
 ```yaml
-- uses: silverlyra/setup-aws-eks@v0.1
+- uses: gumlet/aws-eks-action@v1.0
   with:
     # Name of the EKS cluster you want to access (required)
     cluster: ''
@@ -43,7 +43,7 @@ See [action.yml](action.yml).
     aws-region: us-east-2
 
 - name: Configure Kubernetes client
-  uses: silverlyra/setup-aws-eks@v0.1
+  uses: gumlet/aws-eks-action@v1.0
   with:
     cluster: my-cluster-name
 
