@@ -1,9 +1,9 @@
-import {spawn} from 'child_process'
+import { spawn } from 'node:child_process'
 
 import * as core from '@actions/core'
 
 async function run(): Promise<void> {
-  const name = core.getInput('cluster', {required: true})
+  const name = core.getInput('cluster', { required: true })
   const context = core.getInput('context') || name
   const role = core.getInput('role') || undefined
   const activate = core.getBooleanInput('activate')
@@ -93,7 +93,7 @@ async function describeCluster(
   if (core.isDebug()) {
     core.debug(`Cluster ${name}:`)
     // eslint-disable-next-line no-console
-    console.dir({cluster}, {colors: true, depth: null})
+    console.dir({ cluster }, { colors: true, depth: null })
   }
 
   core.setOutput('cluster_name', cluster.name)
@@ -120,7 +120,7 @@ interface Cluster {
   platformVersion: string
   endpoint: string
   status: string
-  certificateAuthority?: {data: string}
+  certificateAuthority?: { data: string }
   tags: Record<string, string>
 }
 
@@ -131,7 +131,7 @@ async function exec(command: string[], env?: Environment): Promise<string> {
 
   const proc = spawn(command[0], command.slice(1), {
     stdio: ['ignore', 'pipe', 'inherit'],
-    env: env ? {...process.env, ...env} : undefined
+    env: env ? { ...process.env, ...env } : undefined
   })
 
   return new Promise<string>((resolve, reject) => {
@@ -139,7 +139,7 @@ async function exec(command: string[], env?: Environment): Promise<string> {
 
     proc.once('error', reject)
 
-    proc.stdout.on('data', data => {
+    proc.stdout.on('data', (data) => {
       output.push(data.toString('utf-8'))
     })
 
@@ -167,7 +167,7 @@ async function assumeRole(arn: string): Promise<Environment> {
     '--role-session-name',
     'setup-aws-eks-github-action'
   ])
-  const {Credentials: creds}: AssumedRole = JSON.parse(output)
+  const { Credentials: creds }: AssumedRole = JSON.parse(output)
 
   return {
     AWS_ACCESS_KEY_ID: creds.AccessKeyId,

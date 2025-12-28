@@ -1,0 +1,19 @@
+{
+  "linter": {
+    "rules": {
+      "suspicious": {
+        "noThenProperty": "off"
+      }
+    }
+  },
+  "formatter": {
+    "indentStyle": "space"
+  },
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "semicolons": "asNeeded",
+      "trailingCommas": "none"
+    }
+  }
+}
