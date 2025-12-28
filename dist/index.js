@@ -148,7 +148,7 @@ function exec(command, env) {
         return new Promise((resolve, reject) => {
             const output = [];
             proc.once('error', reject);
-            proc.stdout.on('data', data => {
+            proc.stdout.on('data', (data) => {
                 output.push(data.toString('utf-8'));
             });
             proc.once('close', (status, signal) => {
