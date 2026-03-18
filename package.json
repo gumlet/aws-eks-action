@@ -24,7 +24,7 @@
   "author": "Lyra Naeseth <lyra@lyra.codes>",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^3.0.0"
+    "@actions/core": "^2.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.10",
