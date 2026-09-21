@@ -1,4 +1,5 @@
-import { spawn } from 'node:child_process'
+// biome-ignore lint/style/useNodejsImportProtocol: ncc's ESM output emits a bare require() for node:-prefixed builtins, which throws at runtime in module scope.
+import { spawn } from 'child_process'
 
 import * as core from '@actions/core'
 

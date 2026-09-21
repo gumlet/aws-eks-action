@@ -1,6 +1,10 @@
 # Dependency directory
 node_modules
 
+# The built action bundle is what `uses:` actually runs, so it must be committed
+# even when a user's global gitignore excludes dist/
+!dist/
+
 # Rest pulled from https://github.com/github/gitignore/blob/master/Node.gitignore
 # Logs
 logs

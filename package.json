@@ -4,6 +4,7 @@
   "private": true,
   "description": "Connect a GitHub Actions worker to an EKS cluster",
   "main": "lib/main.js",
+  "type": "module",
   "scripts": {
     "build": "tsc",
     "format": "biome format --write ./src",
@@ -19,18 +20,18 @@
   },
   "keywords": [
     "actions",
-    "setup"
+    "eks"
   ],
-  "author": "Lyra Naeseth <lyra@lyra.codes>",
+  "author": "Gumlet",
   "license": "MIT",
   "dependencies": {
-    "@actions/core": "^2.0.0"
+    "@actions/core": "^3.0.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.3.10",
     "@types/node": "^24.13.3",
-    "@vercel/ncc": "^0.38.0",
-    "js-yaml": "^4.2.0",
-    "typescript": "^6.0.0"
+    "@vercel/ncc": "^0.45.0",
+    "js-yaml": "^5.4.0",
+    "typescript": "^7.0.0"
   }
 }
