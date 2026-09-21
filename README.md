@@ -18,7 +18,7 @@ See [action.yml](action.yml).
 
 <!-- start usage -->
 ```yaml
-- uses: gumlet/aws-eks-action@v1.0
+- uses: gumlet/aws-eks-action@v2
   with:
     # Name of the EKS cluster you want to access (required)
     cluster: ''
@@ -43,7 +43,7 @@ See [action.yml](action.yml).
     aws-region: us-east-2
 
 - name: Configure Kubernetes client
-  uses: gumlet/aws-eks-action@v1.0
+  uses: gumlet/aws-eks-action@v2
   with:
     cluster: my-cluster-name
 
